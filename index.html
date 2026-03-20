@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crispy Async</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="app-header">
+    <h1 class="app-title">Crispy Async</h1>
+    <button id="theme-toggle" class="btn btn-icon">☀️</button>
+  </header>
+
+  <main class="app-main">
+    <section id="user-card" class="card hidden"></section>
+
+    <section id="posts-container" class="hidden">
+      <h2 class="posts-title">Posts</h2>
+      <div id="posts-list"></div>
+    </section>
+
+    <div id="loading" class="loading-container hidden">
+      <div class="spinner"></div>
+      <p>Fetching data...</p>
+    </div>
+
+    <div id="error-message" class="error-container hidden">
+      <p id="error-text">Something went wrong.</p>
+    </div>
+  </main>
+
+  <div class="controls">
+    <button class="btn btn-primary" onclick="loadDashboard(1)">Load User 1</button>
+    <button class="btn btn-primary" onclick="loadDashboard(2)">Load User 2</button>
+    <button class="btn btn-primary" onclick="loadDashboard(5)">Load User 5</button>
+    <button class="btn btn-danger"  onclick="triggerError()">☠ Trigger Error</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
